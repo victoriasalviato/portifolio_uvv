@@ -1,0 +1,58 @@
+/* Estilo do container do input */
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 2rem;
+}
+
+/* Estilo dos campos de input */
+.input-field {
+  width: 100%;
+  padding: 1rem;
+  margin: 1rem 0;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+/* Estilo ao focar nos campos de input */
+.input-field:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Estilo do botão de submit */
+.submit-button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+/* Efeito de hover no botão */
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo do título do componente */
+.input-container h3 {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Estilo da mensagem de erro */
+.error-message {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}

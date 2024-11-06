@@ -14,6 +14,7 @@ import $ from "jquery";
   standalone: true,
   imports: [FormsModule, ChatComponent, CommonModule, BrowserModule],
   templateUrl: './input.component.html',
+  styleUrls: ['./input.component.css'],
 })
 
 export class InputComponent implements OnInit {

@@ -1,0 +1,104 @@
+/* Estilo do container do chat */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100vh;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #fafafa;
+  padding: 1rem;
+}
+
+/* Estilo das mensagens do chat */
+.chat-bubbles {
+  overflow-y: auto;
+  flex-grow: 1;
+  margin-bottom: 1rem;
+}
+
+.chat-item {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.chat-item .message {
+  padding: 1rem;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  max-width: 70%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.chat-item .message.sent {
+  background-color: #d1e7ff;
+  margin-left: auto;
+}
+
+.chat-item .message.received {
+  background-color: #e7f7d1;
+}
+
+/* Estilo para o nome do usuário */
+.chat-item .message .user-name {
+  font-weight: bold;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Estilo para o conteúdo da mensagem */
+.chat-item .message .content {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Data e hora */
+.chat-item .message .timestamp {
+  font-size: 0.75rem;
+  color: #aaa;
+  position: absolute;
+  bottom: -1.5rem;
+  right: 1rem;
+}
+
+/* Estilo da caixa de entrada de mensagem */
+.chat-input-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.chat-input {
+  width: 80%;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  font-size: 1rem;
+  resize: none;
+}
+
+.chat-input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* Estilo do botão de enviar */
+.send-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.send-button:hover {
+  background-color: #0056b3;
+}

@@ -18,6 +18,7 @@ import $ from "jquery";
     DatePipe,
     NgClass
   ],
+  styleUrls: ['./chat.component.css'],
   templateUrl: './chat.component.html',
 })
 export class ChatComponent implements OnInit {
