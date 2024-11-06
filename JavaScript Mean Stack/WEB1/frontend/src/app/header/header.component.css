@@ -1,0 +1,82 @@
+/* Container principal do cabeçalho */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #007bff;
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo e título */
+.header-logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+.header-logo img {
+  height: 40px;
+  margin-right: 0.5rem;
+}
+
+/* Navegação */
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  font-size: 1rem;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #d1e7fd;
+}
+
+/* Botão de login */
+.login-button {
+  padding: 0.5rem 1rem;
+  background-color: #ffffff;
+  color: #007bff;
+  border: none;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-button:hover {
+  background-color: #e2e6ea;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+  .nav-links {
+      display: none; /* Esconde links de navegação em telas menores */
+  }
+
+  .header-container {
+      justify-content: space-between;
+  }
+}
+
+/* Menu hambúrguer para telas menores */
+.menu-icon {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+      display: block; /* Exibe ícone do menu em telas menores */
+  }
+}

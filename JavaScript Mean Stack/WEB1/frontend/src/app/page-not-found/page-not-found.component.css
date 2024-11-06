@@ -1,0 +1,68 @@
+/* Container principal para centralizar o conteúdo */
+.page-not-found-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  background-color: #f8f9fa;
+  color: #495057;
+  padding: 2rem;
+}
+
+/* Estilo para o título 404 */
+.error-code {
+  font-size: 8rem;
+  font-weight: bold;
+  color: #adb5bd;
+  margin: 0;
+}
+
+/* Estilo para a mensagem de erro */
+.error-message {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  color: #6c757d;
+}
+
+/* Texto adicional */
+.error-description {
+  font-size: 1rem;
+  color: #868e96;
+  margin-bottom: 2rem;
+}
+
+/* Botão para voltar à página inicial */
+.back-home-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.back-home-button:hover {
+  background-color: #0056b3;
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 576px) {
+  .error-code {
+      font-size: 5rem;
+  }
+
+  .error-message {
+      font-size: 1.25rem;
+  }
+
+  .error-description {
+      font-size: 0.9rem;
+  }
+}
+
