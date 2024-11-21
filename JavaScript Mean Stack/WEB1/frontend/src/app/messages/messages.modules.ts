@@ -1,4 +1,4 @@
-import {ChatComponent} from './message/chat/chat.component';  // Ajuste o caminho conforme necessário
+import {ChatComponent} from './chat/chat.component';  // Ajuste o caminho conforme necessário
 import { MessagesComponent } from './messages.component';
 import { CommonModule } from '@angular/common';
 
