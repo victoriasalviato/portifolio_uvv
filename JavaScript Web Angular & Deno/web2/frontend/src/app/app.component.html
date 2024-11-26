@@ -1,0 +1,61 @@
+<!-- Conteúdo dinâmico para o app.component.html -->
+<main>
+  <!-- Cabeçalho -->
+  <header class="header">
+    <div class="header-logo">
+      <img src="assets/logo.png" alt="Logo do site" class="site-logo" />
+    </div>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a routerLink="/home" routerLinkActive="active">Início</a></li>
+        <li>
+          <a routerLink="/register" routerLinkActive="active">Registrar</a>
+        </li>
+        <li><a routerLink="/login" routerLinkActive="active">Login</a></li>
+        <li><a routerLink="/about" routerLinkActive="active">Sobre</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <section class="content-container">
+    <div class="hero-section">
+      <h1>Bem-vindo ao Site de Apostas!</h1>
+      <p>
+        Explore nossa plataforma e descubra uma maneira inovadora de fazer
+        apostas com segurança, praticidade e transparência.
+      </p>
+      <button class="btn-primary" routerLink="/register">
+        Cadastre-se Agora
+      </button>
+    </div>
+
+    <div class="features">
+      <h2>Por que escolher nossa plataforma?</h2>
+      <ul class="features-list">
+        <li>
+          🛡️ **Segurança em Primeiro Lugar:** Proteção de dados com
+          criptografia.
+        </li>
+        <li>⚡ **Agilidade:** Processamento rápido e intuitivo.</li>
+        <li>
+          📈 **Estatísticas Avançadas:** Informações em tempo real para melhorar
+          suas apostas.
+        </li>
+        <li>🏆 **Prêmios Exclusivos:** Ganhe mais enquanto se diverte.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2024 - Site de Apostas. Todos os direitos reservados.</p>
+      <div class="social-icons">
+        <a href="#"><img src="assets/icons/facebook.svg" alt="Facebook" /></a>
+        <a href="#"><img src="assets/icons/twitter.svg" alt="Twitter" /></a>
+        <a href="#"><img src="assets/icons/instagram.svg" alt="Instagram" /></a>
+      </div>
+    </div>
+  </footer>
+</main>

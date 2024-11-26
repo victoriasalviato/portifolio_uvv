@@ -1,0 +1,34 @@
+@import "app/scss/variables";
+@import "app/scss/mixins";
+@import "app/scss/base";
+@import "app/scss/components";
+
+// Estilos específicos para o componente do App
+main {
+  padding: 2rem;
+}
+
+.content {
+  @include flex-center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.divider {
+  width: 1px;
+  background: $red-to-pink-to-purple-vertical-gradient;
+  margin-inline: 0.5rem;
+}
+
+.pill-group .pill:nth-child(1) {
+  $pill-accent: $bright-blue;
+}
+
+.pill-group .pill:nth-child(2) {
+  $pill-accent: $french-violet;
+}
+
+.pill-group .pill:nth-child(3) {
+  $pill-accent: $vivid-pink;
+}

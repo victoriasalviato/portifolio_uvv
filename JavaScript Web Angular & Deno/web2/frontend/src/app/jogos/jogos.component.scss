@@ -1,0 +1,42 @@
+@import "app/scss/variables";
+@import "app/scss/mixins";
+@import "app/scss/base";
+@import "app/scss/components";
+
+// Estilização para o componente de jogos
+.jogos-container {
+  background: $gray-800;
+  color: $gray-200;
+  padding: 2rem;
+
+  .game-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+    .game-card {
+      background: $gray-700;
+      padding: 1rem;
+      border-radius: $border-radius-md;
+      width: calc(25% - 1.5rem);
+      text-align: center;
+      box-shadow: $box-shadow;
+
+      img {
+        max-width: 100%;
+        border-radius: $border-radius-sm;
+        margin-bottom: 1rem;
+      }
+
+      .game-title {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+      }
+
+      button {
+        @include button-style($secondary-color, $white);
+      }
+    }
+  }
+}

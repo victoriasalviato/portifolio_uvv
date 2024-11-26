@@ -1,0 +1,59 @@
+@import "app/scss/variables";
+@import "app/scss/mixins";
+@import "app/scss/base";
+@import "app/scss/components";
+
+// Estilização para o componente de apostas
+.betting-container {
+  background: $gray-900;
+  color: $gray-200;
+  padding: 2rem;
+
+  .betting-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    .title {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .balance {
+      font-size: 1.2rem;
+      color: $primary-color;
+    }
+  }
+
+  .betting-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+
+    .bet-card {
+      background: $gray-800;
+      padding: 1rem;
+      border-radius: $border-radius-md;
+      box-shadow: $box-shadow;
+
+      .match-details {
+        margin-bottom: 1rem;
+        font-weight: bold;
+      }
+
+      .odds {
+        display: flex;
+        justify-content: space-around;
+
+        button {
+          @include button-style($gray-600, $white);
+          &:hover {
+            background: $primary-color;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}

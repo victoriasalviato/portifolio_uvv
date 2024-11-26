@@ -1,0 +1,83 @@
+<div class="betting-container">
+  <!-- Cabeçalho -->
+  <header class="header">
+    <h1>Site de Apostas Esportivas</h1>
+    <p>
+      Bem-vindo! Aposte em seus esportes favoritos com segurança e praticidade.
+    </p>
+  </header>
+
+  <!-- Seção de Jogos Disponíveis -->
+  <section class="games-section">
+    <h2>Jogos Disponíveis</h2>
+    <div class="games-list">
+      <div *ngIf="games && games.length > 0; else noGames">
+        <div *ngFor="let game of games" class="game-card">
+          <div class="game-info">
+            <h3>{{ game.nome }}</h3>
+            <p>Horário: {{ game.horario | date: "shortTime" }}</p>
+            <p>Odds:</p>
+            <ul>
+              <li *ngFor="let odd of game.odds">
+                <button (click)="selectOdd(game, odd)">
+                  {{ odd.nome }}: {{ odd.valor }}
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <ng-template #noGames>
+        <p>Nenhum jogo disponível no momento.</p>
+      </ng-template>
+    </div>
+  </section>
+
+  <!-- Formulário de Aposta -->
+  <section class="bet-form" *ngIf="selectedGame && selectedOdd">
+    <h2>Fazer Aposta</h2>
+    <p>Jogo: {{ selectedGame.nome }}</p>
+    <p>
+      Aposta Selecionada: {{ selectedOdd.nome }} com odd de
+      {{ selectedOdd.valor }}
+    </p>
+
+    <form (ngSubmit)="placeBet()">
+      <label for="betAmount">Valor da Aposta:</label>
+      <input
+        type="number"
+        id="betAmount"
+        [(ngModel)]="betAmount"
+        name="betAmount"
+        required
+        min="1"
+      />
+      <button type="submit" [disabled]="!betAmount || betAmount <= 0">
+        Confirmar Aposta
+      </button>
+    </form>
+  </section>
+
+  <!-- Histórico de Apostas -->
+  <section class="bet-history" *ngIf="betHistory && betHistory.length > 0">
+    <h2>Histórico de Apostas</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Jogo</th>
+          <th>Aposta</th>
+          <th>Odd</th>
+          <th>Valor</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let bet of betHistory">
+          <td>{{ bet.game }}</td>
+          <td>{{ bet.odd }}</td>
+          <td>{{ bet.value }}</td>
+          <td>{{ bet.amount | currency: "BRL" }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</div>

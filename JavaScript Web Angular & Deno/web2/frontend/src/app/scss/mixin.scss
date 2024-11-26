@@ -1,0 +1,12 @@
+// Mixin para layout flexível
+@mixin flex-center($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+// Mixin para transições suaves
+@mixin smooth-transition($property, $duration: 0.3s) {
+  transition: $property $duration ease;
+}

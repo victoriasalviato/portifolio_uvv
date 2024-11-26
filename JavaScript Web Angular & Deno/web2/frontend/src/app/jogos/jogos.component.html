@@ -1,0 +1,39 @@
+<div class="jogos-container">
+  <!-- Título -->
+  <h1>Jogos Disponíveis</h1>
+
+  <!-- Barra de busca -->
+  <div class="search-bar">
+    <input
+      type="text"
+      placeholder="Procure por um jogo..."
+      [(ngModel)]="searchQuery"
+      (input)="filtrarJogos()"
+    />
+  </div>
+
+  <!-- Lista de jogos -->
+  <div *ngIf="filteredJogos.length > 0; else noGames" class="games-list">
+    <div class="game-card" *ngFor="let jogo of filteredJogos">
+      <div class="game-info">
+        <h3>{{ jogo.nome }}</h3>
+        <!-- Exibindo a data formatada e a hora -->
+        <p>{{ jogo.data | date: "longDate" }} - {{ jogo.hora }}</p>
+      </div>
+      <div class="game-odds">
+        <!-- Exibindo as odds -->
+        <p>
+          Odd: <span>{{ jogo.odd | number: "1.2-2" }}</span>
+        </p>
+        <button (click)="apostar(jogo.id)">Apostar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mensagem de erro caso não haja jogos -->
+  <ng-template #noGames>
+    <p class="no-games-message">
+      Nenhum jogo encontrado. Tente ajustar sua busca.
+    </p>
+  </ng-template>
+</div>

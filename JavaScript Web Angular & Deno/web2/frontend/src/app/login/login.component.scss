@@ -1,0 +1,40 @@
+@import "app/scss/variables";
+@import "app/scss/mixins";
+@import "app/scss/base";
+@import "app/scss/components";
+
+// Estilização para o componente de login
+.login-container {
+  @include flex-center;
+  background: $gray-800;
+  color: $gray-300;
+  padding: 2rem;
+  border-radius: $border-radius-sm;
+
+  .login-form {
+    width: 100%;
+    max-width: 400px;
+    background: $gray-700;
+    padding: 1.5rem;
+    border-radius: $border-radius-md;
+    box-shadow: $box-shadow;
+
+    input {
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.8rem;
+      border: 1px solid $gray-500;
+      border-radius: $border-radius-sm;
+
+      &:focus {
+        outline: none;
+        border-color: $primary-color;
+        box-shadow: $focus-shadow;
+      }
+    }
+
+    button {
+      @include button-style($primary-color, $white);
+    }
+  }
+}

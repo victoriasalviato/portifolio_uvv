@@ -1,0 +1,11 @@
+@import "app/scss/variables";
+@import "app/scss/mixins";
+@import "app/scss/base";
+@import "app/scss/components";
+
+// Agora você pode usar as variáveis, mixins e outros estilos globais
+.register-container {
+  @include flex-center;
+  background: $gray-700;
+  padding: 2rem;
+}
