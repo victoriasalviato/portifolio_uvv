@@ -9,7 +9,7 @@ USE LabdeBDII
 
 CREATE SCHEMA MeuLabdeBDII
 
-USE MeuLabdeBDI
+USE MeuLabdeBDII
 
 
 CREATE TABLE Clientes (
